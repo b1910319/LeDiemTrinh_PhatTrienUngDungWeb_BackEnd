@@ -9,5 +9,4 @@ router.route("/:id")
   .get(danhMuc.findOne)
   .put(danhMuc.update)
   .delete(danhMuc.delete);
-
 module.exports = router;

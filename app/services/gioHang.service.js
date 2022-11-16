@@ -12,7 +12,7 @@ class GioHangService {
       tinhTrang: payload.tinhTrang,
       thoigian: {
         type: Date,
-        default: Date.now,
+        default: new Date(),
       },
     };
     Object.keys(gioHang).forEach(
@@ -41,12 +41,6 @@ class GioHangService {
     const cursor = await this.GioHang.find(filter);
     return await cursor.toArray();
   }
-
-  // async findByName(tenTS) {
-  //   return await this.find({
-  //     tenTS: { $regex: new RegExp(tenTS), $options: "i" },
-  //   });
-  // }
 
   async findById(id) {
     return await this.GioHang.findOne({

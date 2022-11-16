@@ -9,5 +9,4 @@ router.route("/:id")
   .get(traSua.findOne)
   .put(traSua.update)
   .delete(traSua.delete);
-
 module.exports = router;
