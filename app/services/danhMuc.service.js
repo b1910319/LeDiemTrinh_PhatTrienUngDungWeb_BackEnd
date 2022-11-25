@@ -56,7 +56,7 @@ class DanhMucService {
     const update = this.danhMucData(payload);
     const result = await this.DanhMuc.findOneAndUpdate(
       filter,
-      { $set: update },
+      { $set: update},
       { returnDocument: "after", upsert: true }
     );
     return result.value;
